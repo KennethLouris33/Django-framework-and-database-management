@@ -1,0 +1,24 @@
+{% extends "main/base.html" %}
+{% block title %}View{% endblock%}
+
+{%block content%}
+<h1>{{ls.name}}</h1>
+<p>You can click this button to see your added items</p>
+<button>
+  <a href="http://127.0.0.1:8000/admin/main/" target="_blank">View</a>
+</button> 
+
+    {% for item in ls.item_set.all %}
+    <ul>
+     <li>{{item.text}}</li>
+    </ul>
+
+    <h1>{{ls.name}}</h1>
+    {% for item in ls.item_set.all %}
+    <ul>
+     <li>{{item.text}}</li>
+    </ul>
+    {% endfor %}
+
+    {% endfor %}
+    {% endblock %}

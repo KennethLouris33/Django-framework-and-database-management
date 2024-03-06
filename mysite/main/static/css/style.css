@@ -1,0 +1,12 @@
+body {background-color: rgb(197, 103, 52);}
+h1   {color: rgb(31, 40, 168);}
+p    {color: red;}
+
+body, html {
+height: 100%;
+margin: 0;
+}
+
+.headtext1{
+    text-align: center;
+}

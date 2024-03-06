@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--a delmiter tag  -->
+{% load static %}
+
+<html>
+    <head>
+        <!-- This is the style section where we can design the looks of text -->
+        <link rel="stylesheet" href="static/css/style.css">
+        <title>{% block title %}index{% endblock %}</title>
+        <style type="text/css">
+            .sidenav {
+                height:100%;
+                width:100px;
+                position: fixed;
+                z-index:1;
+                top:0;
+                left:0;
+                background-color:#111;
+                overflow-x:hidden;
+                padding-top: 20px;
+            }
+
+            .sidenav a {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size:25px;
+                color: #818181;
+                display: block;
+            }
+
+            .sidenav a:hover{
+                color: #f1f1f1;
+            }
+
+            .main{
+                margin-left:160px;
+                padding: 0px 10px;
+            }
+            .ht{
+                text-align: center;
+            }
+            body{
+                background-color: rgb(204, 94, 50);
+
+            p{
+                color: #f1f1f1;
+            }    
+
+            }
+            </style>
+            
+    </head>
+
+    <body>
+        <!-- This is the navigation panel on the left side -->
+        <div class="sidenav">
+            <a href="/admin">Admin</a>
+            <a href="/home">Home</a>
+            <a href="/login">Login</a>
+            <!-- <a href="/create">Create</a> -->
+            <a href="/view">View</a>
+
+        </div>
+        <div id="content", name="content" class="main"> 
+            
+            {% block content %}
+             <h1 class="ht">This is the home</h1>
+             <div style="text-align:center">
+                <p>This small project contains the django framework and models used to create a user interface login administration. You can create lists and users by logging into the admin and manage data.</p>
+            </div>
+            {% endblock %}
+        
+        </div>
+    </body> 
+        </html>
+
+
+
+        

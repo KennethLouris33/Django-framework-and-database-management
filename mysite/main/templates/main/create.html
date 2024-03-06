@@ -1,0 +1,24 @@
+<!-- {% extends 'main/base.html' %}
+
+{% block title %} Create New List {% endblock %}
+
+{% block content %}
+
+<style>
+body {background-color: rgb(197, 103, 52);}
+</style>
+<body>
+    
+    <h4>Create new list</h4>
+    <form method="post" action="/create/">
+        {% csrf_token %} 
+        <!-- Django provides a feature known as a CSRF token to get away from CSRF attacks that can be very dangerous. when the session of the user starts on a website, a token is generated which is then cross-verified with the token present with the request whenever a request is being processed. -->
+        <div class="input-group-prepend">
+            <button type="submit", name="save" class="btn-success">Name</button>
+            {{form.name}} 
+            <!-- The form looks bad so we can modify it by editing the {{form}} to {{form.as_table}} and {{form.as_p}}. and {{form.as_ul}} depends on what you want it to look. Also, we can see that when we hover our mouse on the name field it pops up a message and this is because that Django auto generated this field but if we manually created this requires Javascript. -->
+        </div>
+    </form>
+    {% endblock %} 
+</body>
+ -->
